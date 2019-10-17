@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oblig1</title>
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .gridcontainer {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 8fr 1fr;
+            grid-template-rows: auto auto;
+        }
+
+        .item {
+            border: 1px solid rebeccapurple;
+
+        }
+
+        .mytext {
+            /* text-align: center; */
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+
+</head>
+
+
+</div>
+
+<body>
+    <div class="gridcontainer">
+        <div class="item mytext" id="textchange" onclick="addstexttodiv(this)">Ja</div>
+        <div class="item mytext">
+            <h2>Obligatorisk oppgave 1</h2>
+
+            Når modul 1 er over, må man ha fått godkjent obligatorisk oppgave 1 og 2 for å kunne fortsette på modul 2.
+
+            Obligatorisk oppgave 1 leveres inn som en e-post som sendes til terje@getacademy.no. E-posten skal inneholde
+            dette:
+            <ul>
+                <li>Lenke til et GitHub-repository som inneholde koden som er laget
+                </li>
+                <li>Lenke til GitHub-pages, hvos applikasjonen skal kunne kjøres direkte
+                </li>
+                <li>
+
+
+                    Lenke til video lastet opp til <a href="https://photos.google.com">photos.google.com</a> <a
+                        href="https://obsproject.com"> OBS
+                        Studio</a> Bruk OBS
+                    Studio til å filme skjermen.
+                </li>
+            </ul>
+
+        </div>
+        <div class="item mytext">div2</div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="item" id="tomDiv"></div>
+        <div class="item mytext">
+            <h3>Oppgave</h3>
+
+
+            <ul>
+                <li>Fullskjermslayout med CSS Grid
+                    <pre><code>
+                        display: grid;
+                        justify-items: stretch;
+                        height: 100vh;
+                        grid-template-columns: 0.25fr 4fr 0.25fr;
+                        grid-template-rows: auto; 
+                    </code></pre>
+                </li>
+                <li>Meny knapp som skjuler/viser en meny med minst to valgmuligheter</li>
+                <li>Minst en funksjon - og minst en onclick eller annen event</li>
+                <li>Bruk av nøkkelordet this</li>
+                <li>Minst en if-setning.</li>
+                <div class="item mytext" id="textchange" onclick="addstexttodiv(this)">NEI</div>
+                <li>Applikasjonen skal endre på HTML-dokumentet, ved hjelp av InnerHTML.</li>
+            </ul>
+
+
+        </div>
+        <div class="item mytext">Meny<br>
+            <select onchange="addstexttodiv(this)" name="meny" id="">
+                <option value="1">Valg 1</option>
+                <option value="2">Valg 2</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        console.log('Test', recievedFromOnclick);
+        let heiDiv = document.getElementById("textchange");
+        let tomDiv = document.getElementById("tomDiv");
+
+        function addstexttodiv(recievedFromOnclick) {
+            if (recievedFromOnclick.value == "1") {
+                heiDiv.innerHTML += "Nei";
+
+            }
+            else if (recievedFromOnclick.value == "2") {
+                heiDiv.innerHTML += "...jo?";
+            }
+
+
+
+            // if (heiDiv.innerHTML = "Nei";){
+            // }
+
+        }
+    </script>
+</body>
+
+</html>
